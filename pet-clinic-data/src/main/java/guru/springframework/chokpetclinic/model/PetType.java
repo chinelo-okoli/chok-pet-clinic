@@ -1,6 +1,6 @@
 package guru.springframework.chokpetclinic.model;
 
-public class PetType extends BaseEntity {
+public class PetType extends BaseEntity<Long> {
     private String name;
 
     public String getName() {
