@@ -43,7 +43,7 @@
     </build>
 
     <scm>
-        <developerConnection>${scm.url}</developerConnection>
+        <developerConnection>scm:git:https://github.com/chinelo-okoli/chok-pet-clinic.git</developerConnection>
       <tag>HEAD</tag>
   </scm>
 </project>
