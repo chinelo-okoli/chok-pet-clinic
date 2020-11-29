@@ -5,8 +5,6 @@ import guru.springframework.chokpetclinic.model.Owner;
 import guru.springframework.chokpetclinic.model.Vet;
 import guru.springframework.chokpetclinic.services.OwnerService;
 import guru.springframework.chokpetclinic.services.VetService;
-import guru.springframework.chokpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.chokpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +14,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    // automatically auto wires params
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
